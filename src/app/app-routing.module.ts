@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { MainMenuComponent } from './views/main-menu/main-menu.component';
+import { NewGameComponent } from './views/new-game/new-game.component';
+import { SavedGamesComponent } from './views/saved-games/saved-games.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: MainMenuComponent },
+  { path: 'new-game', component: NewGameComponent },
+  { path: 'saved-games', component: SavedGamesComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
